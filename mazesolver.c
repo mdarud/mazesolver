@@ -83,6 +83,7 @@ bool solveMaze(int maze[baris][kolom])
     xp = -1; yp = -1;
     initPos(maze,&x,&y);
     maze[x][y] = 0;
+    printSolution(maze,x,y); 
     while (true){
         if ((x == baris - 1 ||  y == kolom - 1) && maze[x][y] == 0) break;
         solveMazeUtil(maze,&x,&y,vis);
